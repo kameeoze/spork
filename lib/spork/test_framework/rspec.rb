@@ -1,6 +1,6 @@
 class Spork::TestFramework::RSpec < Spork::TestFramework
-  DEFAULT_PORT = 8989
-  HELPER_FILE = File.join(Dir.pwd, "spec/spec_helper.rb")
+  DEFAULT_PORT = ENV['RSPEC_PORT'] || 8989
+  HELPER_FILE = File.join(Dir.pwd, ENV['RSPEC_HELPER'] || "spec/spec_helper.rb")
 
   def run_tests(argv, stderr, stdout)
     ::Spec::Runner::CommandLine.run(
