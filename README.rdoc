@@ -49,7 +49,7 @@ Then, bootstrap your spec_helper.rb file.
 
 or
 
-  RSPEC_HELPER=./some_non_traditional_directory/spec_helper.rb
+  RSPEC_HELPER=./some_non_traditional_directory/spec_helper.rb spork --bootstrap
 
 Next, edit spec/spec_helper.rb and follow the instructions that were put at the top.
 
