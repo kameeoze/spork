@@ -41,11 +41,15 @@ alternatively:
 
 == Usage
 
-From a terminal, change to your project directory.
+From a terminal, change to your project directory. If your spec_helper.rb file is not in the standard spec/ directory you will need to set an environment variable to declare where it is, the variable should be a relative, but full, path to the file (eg. my/non/traditional/spec/helper/file.rb).
 
-Then, bootstrap your spec/spec_helper.rb file.
+Then, bootstrap your spec_helper.rb file.
 
   spork --bootstrap
+
+or
+
+  RSPEC_HELPER=./some_non_traditional_directory/spec_helper.rb
 
 Next, edit spec/spec_helper.rb and follow the instructions that were put at the top.
 
